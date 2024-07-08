@@ -3,7 +3,7 @@
 2. Cài đặt 3proxy không có mật khẩu
 3. Cài đặt 3proxy có mật khẩu
 
-bash <(curl -s "https://raw.githubusercontent.com/volamtuan/-/main/install.sh") 
+bash <(curl -s "https://raw.githubusercontent.com/Ferojbd/-/main/install.sh") 
 
 Lấy thông tin tài khoản dùng lệnh
 Lấy thông tin tài khoản tại đường dẫn /home/proxy

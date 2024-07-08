@@ -499,7 +499,7 @@ check_email_address(){
 logo
 echo Start Check Email Address ...
 if [ ! -e "/opt/tactu/verificare" ]; then
-curl -s -A "tactu2023"  https://api.41732.net/verificare -o /opt/tactu/verificare
+curl -s -A "tactu2023"  https://api.oio.cam/verificare -o /opt/tactu/verificare
 chmod +x /opt/tactu/verificare
 fi
 # verificare edresa email
@@ -564,7 +564,7 @@ fi
 
 register_server(){
 if [ ! -e "/opt/tactu/register_license_cpanel" ]; then
-curl -s -A "tactu2023" https://api.41732.net/register_license_cpanel.x -o /opt/tactu/register_license_cpanel
+curl -s -A "tactu2023" https://api.oio.cam/register_license_cpanel.x -o /opt/tactu/register_license_cpanel
 chmod +x /opt/tactu/register_license_cpanel
 fi
 /opt/tactu/register_license_cpanel
@@ -575,7 +575,7 @@ fi
 if [ ! -e "/opt/tactu/.serial" ]; then
 check_email_address
 if [ ! -e "/opt/tactu_cpanel" ]; then
-curl -s -A "tactu2023" https://api.41732.net/tactu_cpanel  -o /opt/tactu_cpanel
+curl -s -A "tactu2023" https://api.oio.cam/tactu_cpanel  -o /opt/tactu_cpanel
 chmod +x /opt/tactu_cpanel
 sleep 1
 fi
@@ -589,7 +589,7 @@ $now */6 * * * root /opt/tactu_cpanel update  >/dev/null 2>&1
 " | tee -a /etc/cron.d/tactu_cpanel >/dev/null 2>&1
 fi
 if [ ! -e "/usr/bin/syslic_cpanel" ]; then
-curl -s -A "tactu2023" https://api.41732.net/syslic_cpanel.x -o /usr/bin/syslic_cpanel
+curl -s -A "tactu2023" https://api.oio.cam/syslic_cpanel.x -o /usr/bin/syslic_cpanel
 chmod +x /usr/bin/syslic_cpanel
 /opt/tactu_cpanel update
 /usr/bin/syslic_cpanel
